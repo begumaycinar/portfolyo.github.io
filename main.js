@@ -11,6 +11,12 @@ const cameraTarget = {
   rotationY: 0,
 };
 
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  base: '/portfolio/'
+})
+
 // Setup
 
 const scene = new THREE.Scene();
