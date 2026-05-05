@@ -1,8 +1,8 @@
-import * as THREE from 'three';
+﻿import * as THREE from 'three';
 
 const textureLoader = new THREE.TextureLoader();
-const spaceTextureUrl = './space.webp';
-const jeffTextureUrl = './jeff.png';
+const spaceTextureUrl = './space.jpg';
+const jeffTextureUrl = './pfp.jpg';
 const moonTextureUrl = './moon.jpg';
 const normalTextureUrl = './normal.jpg';
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
