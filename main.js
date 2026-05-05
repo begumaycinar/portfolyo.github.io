@@ -1,11 +1,10 @@
-import './style.css';
 import * as THREE from 'three';
-import spaceTextureUrl from './space.webp';
-import jeffTextureUrl from './jeff.png';
-import moonTextureUrl from './moon.jpg';
-import normalTextureUrl from './normal.jpg';
 
 const textureLoader = new THREE.TextureLoader();
+const spaceTextureUrl = './space.webp';
+const jeffTextureUrl = './jeff.png';
+const moonTextureUrl = './moon.jpg';
+const normalTextureUrl = './normal.jpg';
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const scrollDepth = 0.014;
 
