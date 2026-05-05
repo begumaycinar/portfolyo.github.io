@@ -1,5 +1,9 @@
 import './style.css';
 import * as THREE from 'three';
+import spaceTextureUrl from './space.webp';
+import jeffTextureUrl from './jeff.png';
+import moonTextureUrl from './moon.jpg';
+import normalTextureUrl from './normal.jpg';
 
 const textureLoader = new THREE.TextureLoader();
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -75,7 +79,7 @@ addStars();
 // Background
 
 textureLoader.load(
-  'space.webp',
+  spaceTextureUrl,
   (texture) => {
     texture.encoding = THREE.sRGBEncoding;
     scene.background = texture;
@@ -91,7 +95,7 @@ textureLoader.load(
 const jeffMaterial = new THREE.MeshBasicMaterial({ color: 0x8ec5ff });
 
 textureLoader.load(
-  'jeff.png',
+  jeffTextureUrl,
   (texture) => {
     texture.encoding = THREE.sRGBEncoding;
     jeffMaterial.map = texture;
@@ -105,8 +109,8 @@ scene.add(jeff);
 
 // Moon
 
-const moonTexture = textureLoader.load('moon.jpg');
-const normalTexture = textureLoader.load('normal.jpg');
+const moonTexture = textureLoader.load(moonTextureUrl);
+const normalTexture = textureLoader.load(normalTextureUrl);
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
