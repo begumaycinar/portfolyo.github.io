@@ -11,11 +11,6 @@ const cameraTarget = {
   rotationY: 0,
 };
 
-import { defineConfig } from 'vite'
-
-export default defineConfig({
-  base: '/portfolio/'
-})
 
 // Setup
 
@@ -80,7 +75,7 @@ addStars();
 // Background
 
 textureLoader.load(
-  'space.jpg',
+  'space.webp',
   (texture) => {
     texture.encoding = THREE.sRGBEncoding;
     scene.background = texture;
@@ -415,3 +410,4 @@ function animate() {
 }
 
 animate();
+
